@@ -1,1 +1,21 @@
 // Mixins in here
+.buttonStyle(@btnBg, @btnFontColor){
+    background-color: @btnBg;
+    color: @btnFontColor;
+    padding: 5% 0;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+
+    @media @mobile {
+        width: 100%;
+        padding: 3% 0;
+    }
+
+        &:hover {
+            background-color: darken(@btnBg, 10%);
+        }
+}
